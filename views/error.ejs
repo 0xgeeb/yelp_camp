@@ -7,7 +7,9 @@
             <hr>
             <p>im jk, prolly wasnt a big deal just try again champ</p>
             <hr>
-            <p><%= err.stack %></p>
+            <% if (process.env.NODE_ENV !== 'production') { %> 
+                <p><%= err.stack %></p>
+            <% } %> 
         </div>
     </div>
 </div>
